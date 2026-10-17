@@ -1,0 +1,192 @@
+/* Base styles (previously in index.css of the Vite project) */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0d1a2e;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+}
+
+.Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 24px 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 330px;
+  min-height: 520px;
+  border-radius: 16px;
+  background: #14253D;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 30px -5px rgba(0, 0, 0, 0.5);
+}
+
+.card__images {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card__images img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card__images-layer {
+  display: none;
+  position: absolute;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 255, 248, 0.4);
+  cursor: pointer;
+}
+
+.card__images:hover .card__images-layer,
+.card__images:focus-visible .card__images-layer {
+  display: flex;
+}
+
+a:focus-visible,
+.card__images:focus-visible {
+  outline: 2px solid #00FFF8;
+  outline-offset: 2px;
+}
+
+.card__images .card__view-icon {
+  width: 48px;
+  height: 48px;
+  aspect-ratio: auto;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.card__title {
+  cursor: pointer;
+  transition: color 0.3s;
+  font-size: 24px;
+  font-weight: 800;
+  margin: 14px 0 15px 4px;
+}
+
+.card__title:hover {
+  color: #00FFF8;
+}
+
+.card__description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #8BACD9;
+  margin: 0 0 15px 4px;
+}
+
+.card__time {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 4px 0 8px 4px;
+}
+
+.card__time-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #00FFF8;
+}
+
+.equilibrium-icon,
+.clock_icon {
+  width: 20px;
+  height: 20px;
+  aspect-ratio: auto;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.card__time-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  margin: 0 6px 0 0;
+  color: #8bacd9;
+  font-weight: 400;
+}
+
+.card__creator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 2px solid #2d4264;
+}
+
+.avatar_img {
+  width: 34px;
+  height: 34px;
+  border: 1px solid white;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card__creator p {
+  color: #8bacd9;
+  font-family: 'Outfit', sans-serif;
+}
+
+.card__creator span {
+  color: white;
+  font-family: 'Outfit', sans-serif;
+}
+
+.card__creator span:hover {
+  color: #00FFF8;
+}
+
+.attribution {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.attribution p {
+  color: #8BACD9;
+  font-family: 'Outfit', sans-serif;
+}
+
+.attribution a {
+  color: #00FFF8;
+  transition: color 0.3s;
+}
+
+.attribution a:hover {
+  color: white;
+}
+
+@media (max-width: 360px) {
+  .card {
+    padding: 20px;
+  }
+  .card__title {
+    font-size: 22px;
+  }
+}
