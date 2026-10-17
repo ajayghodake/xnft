@@ -186,7 +186,7 @@ a:focus-visible,
   .card {
     padding: 20px;
   }
-  .card__title {
+  .card__title h1{
     font-size: 22px;
   }
 }
